@@ -213,8 +213,8 @@ def eval_genomes(genomes, config):
 
 def run_neat(config):
     checkpoint_path = os.path.join(local_dir, 'checkpoints/neat-checkpoint-2303')
-    p = neat.Checkpointer.restore_checkpoint(checkpoint_path)
-    #p = neat.Population(config)
+    #p = neat.Checkpointer.restore_checkpoint(checkpoint_path)
+    p = neat.Population(config)
     p.add_reporter(neat.StdOutReporter(True))
     stats = neat.StatisticsReporter()
     p.add_reporter(stats)
